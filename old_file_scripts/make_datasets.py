@@ -1,6 +1,7 @@
 '''
     Script to create and save a bunch of datasets for use in R. Combines
-    several older scripts (MultiYearFluxes, MultiYearPrecip, etc)
+    several older scripts (MultiYearFluxes, MultiYearPrecip, etc) from the 
+    NMEG_seasonality_poster analysis in NMEG_miscellany.
 '''
 import sys
 
