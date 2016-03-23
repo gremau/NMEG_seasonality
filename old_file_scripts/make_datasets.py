@@ -65,7 +65,7 @@ PRISM_df = data.reindex( daily_P.index )
 combined = pd.concat( [daily_P, PRISM_df], axis=1)
 
 # Add wateryear col
-combined = ld.add_WY_cols( combined )
+combined = tr.add_WY_cols( combined )
 
 # Export daily and then yearly tables
 combined.to_csv( outpath + 'daily_precip.csv', na_rep='NaN' )
@@ -93,10 +93,10 @@ ET_df = tr.get_var_allsites( daily, 'ET_mm_int_0', sites, startyear=startyr,
         endyear=endyr)
 
 # Add water year and season columns
-FC_int_daily = ld.add_WY_cols(FC_df)
-GPP_int_daily = ld.add_WY_cols(GPP_df)
-RE_int_daily = ld.add_WY_cols(RE_df)
-ET_int_daily = ld.add_WY_cols(ET_df)
+FC_int_daily = tr.add_WY_cols(FC_df)
+GPP_int_daily = tr.add_WY_cols(GPP_df)
+RE_int_daily = tr.add_WY_cols(RE_df)
+ET_int_daily = tr.add_WY_cols(ET_df)
 
 # output to csv
 FC_int_daily.to_csv(outpath + 'FC_int_daily.csv', na_rep='NaN')
